@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    background:#f7f2eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    position:relative;
+    width:380px;
+}
+
+/* صورة الظرف */
+
+#envelope{
+    width:100%;
+    display:block;
+}
+
+/* الدعوة */
+
+#invitation{
+    position:absolute;
+    width:82%;
+    left:9%;
+    bottom:25px;
+
+    transform:translateY(120px);
+    opacity:0;
+
+    transition:1.2s;
+    border-radius:10px;
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+/* مكان الختم */
+
+#seal{
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    left:50%;
+    top:58%;
+
+    transform:translate(-50%,-50%);
+
+    cursor:pointer;
+    border-radius:50%;
+}
+
+/* بعد الضغط */
+
+.open #invitation{
+    transform:translateY(-180px);
+    opacity:1;
+}
+
+.open #envelope{
+    transform:scale(.98);
+    transition:.4s;
+}
+
+.open #seal{
+    display:none;
+}html::before {
+  content: 'CodePen ♥ The Web';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  font-family: monospace;
+  opacity: 0.6;
+  background: rebeccapurple;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
